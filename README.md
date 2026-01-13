@@ -12,7 +12,10 @@ Students must use their **console.anthropic.com** Org ID, NOT their **claude.ai*
 
 Claude user and developer accounts are separate systems; both must use `<your_handle>@tcd.ie` email address for credits to be awarded
 
+<img width="1920" height="986" alt="Page_Guide" src="https://github.com/user-attachments/assets/be6ee9c3-2944-4e0f-9ca7-9c17241a7e49" />
+
 Find the correct Org ID at [console.anthropic.com](console.anthropic.com) → Settings → Organization. 
 
 After resubmission, credits will be awarded the next Friday.
+
 
