@@ -1,0 +1,26 @@
+<article class="event-card {% if include.featured %}event-card--featured{% endif %}">
+  <div class="event-date">
+    <span class="event-day">{{ event.date | date: "%d" }}</span>
+    <span class="event-month">{{ event.date | date: "%b" }}</span>
+  </div>
+  <div class="event-details">
+    <h3 class="event-title">
+      <a href="{{ event.url | relative_url }}">{{ event.title }}</a>
+    </h3>
+    {% if event.time %}
+    <p class="event-time">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      {{ event.time }}
+    </p>
+    {% endif %}
+    {% if event.location %}
+    <p class="event-location">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      {{ event.location }}
+    </p>
+    {% endif %}
+    {% if event.description %}
+    <p class="event-description">{{ event.description }}</p>
+    {% endif %}
+  </div>
+</article>

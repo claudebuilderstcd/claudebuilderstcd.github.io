@@ -5,12 +5,31 @@ description: Claude Builder Club at Trinity College Dublin
 markdown: kramdown
 highlighter: rouge
 
+# Collections
+collections:
+  events:
+    output: true
+    permalink: /events/:slug/
+  news:
+    output: true
+    permalink: /news/:slug/
+
 # Default layout for all pages
 defaults:
   - scope:
       path: ""
     values:
       layout: default
+  - scope:
+      path: ""
+      type: "events"
+    values:
+      layout: event
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: news
 
 # Exclude from processing
 exclude:
