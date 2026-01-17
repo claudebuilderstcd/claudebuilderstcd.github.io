@@ -1,2 +1,20 @@
-title: TCDCBC
+title: TCD Claude Builder Club
 description: Claude Builder Club at Trinity College Dublin
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Default layout for all pages
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
