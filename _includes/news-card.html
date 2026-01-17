@@ -1,0 +1,11 @@
+<article class="news-card">
+  <div class="news-meta">
+    <time datetime="{{ news.date | date_to_xmlschema }}">{{ news.date | date: "%B %d, %Y" }}</time>
+  </div>
+  <h3 class="news-title">
+    <a href="{{ news.url | relative_url }}">{{ news.title }}</a>
+  </h3>
+  {% if news.excerpt %}
+  <p class="news-excerpt">{{ news.excerpt | strip_html | truncate: 150 }}</p>
+  {% endif %}
+</article>
