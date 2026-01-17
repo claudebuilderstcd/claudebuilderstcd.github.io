@@ -175,6 +175,26 @@ body {
   background-color: var(--bg-white) !important;
 }
 
+/* Discord button in nav */
+.nav-discord {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #5865F2;
+  color: white !important;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-md);
+}
+
+.nav-discord:hover {
+  background-color: #4752C4 !important;
+  color: white !important;
+}
+
+.nav-discord svg {
+  flex-shrink: 0;
+}
+
 /* Mobile menu toggle */
 .nav-toggle {
   display: none;
@@ -411,12 +431,112 @@ li {
   margin-top: var(--spacing-lg);
 }
 
+/* Discord CTA button */
+.discord-cta {
+  margin: var(--spacing-lg) 0;
+}
+
+.btn-discord {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: #5865F2;
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.btn-discord:hover {
+  background-color: #4752C4;
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(88, 101, 242, 0.4);
+}
+
+.btn-discord svg {
+  flex-shrink: 0;
+}
+
+/* Inline social links */
+.social-links-inline {
+  display: flex;
+  gap: var(--spacing-md);
+  margin: var(--spacing-md) 0;
+}
+
+.social-links-inline a {
+  color: var(--text-gray-1);
+  font-weight: 500;
+  padding: var(--spacing-xs) 0;
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.social-links-inline a:hover {
+  color: var(--text-light);
+  border-bottom-color: var(--text-light);
+  text-decoration: none;
+}
+
 /* Footer */
 .footer {
   background-color: var(--bg-darker);
   border-top: 1px solid var(--border-light);
-  padding: var(--spacing-lg) 0;
+  padding: var(--spacing-xl) 0;
   margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  color: var(--text-gray-2);
+  transition: all var(--transition-fast);
+}
+
+.social-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Discord hover color */
+.social-link:first-child:hover {
+  background-color: #5865F2;
+  color: white;
+}
+
+/* Instagram hover gradient */
+.social-link:nth-child(2):hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: white;
+}
+
+/* LinkedIn hover color */
+.social-link:nth-child(3):hover {
+  background-color: #0A66C2;
+  color: white;
 }
 
 .footer p {
