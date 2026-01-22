@@ -20,16 +20,6 @@ defaults:
       path: ""
     values:
       layout: default
-  - scope:
-      path: ""
-      type: "events"
-    values:
-      layout: event
-  - scope:
-      path: ""
-      type: "news"
-    values:
-      layout: news
 
 # Exclude from processing
 exclude:
