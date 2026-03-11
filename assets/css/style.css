@@ -585,6 +585,66 @@ li {
 }
 
 /* ==========================================================================
+   Hackathon Banner
+   ========================================================================== */
+
+.hackathon-banner {
+  margin: var(--spacing-lg) 0;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  background: linear-gradient(135deg, rgba(61, 57, 41, 0.5), rgba(61, 57, 41, 0.15));
+  border: 1px solid var(--accent-olive);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.hackathon-banner__badge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 2px 10px;
+  background-color: var(--accent-olive);
+  color: var(--text-light);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hackathon-banner__title {
+  margin: 0;
+  font-size: var(--font-size-xl);
+  color: var(--text-light);
+}
+
+.hackathon-banner__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  color: var(--text-gray-1);
+}
+
+.hackathon-banner__btn {
+  align-self: flex-start;
+  margin-top: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-lg) !important;
+  background-color: var(--bg-cream) !important;
+  color: var(--text-dark) !important;
+  font-weight: 600 !important;
+  border-radius: var(--radius-md) !important;
+  text-decoration: none !important;
+  transition: background-color var(--transition-fast), transform var(--transition-fast) !important;
+}
+
+.hackathon-banner__btn:hover {
+  background-color: var(--bg-white) !important;
+  transform: translateY(-2px);
+  text-decoration: none !important;
+}
+
+/* ==========================================================================
    Events Styles
    ========================================================================== */
 
