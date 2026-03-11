@@ -4,7 +4,24 @@ title: Home
 ---
 
 # TCD Claude Builder Club
-
+<div class="hackathon-banner">
+  <div class="hackathon-banner__badge">Hackathon 2026</div>
+  <h3 class="hackathon-banner__title">Sign up to the Claude Hackathon 2026 and win free API credits!</h3>
+  <div class="hackathon-banner__meta">
+    <span>📅 Friday, March 27</span>
+    <span>🕙 10:00 AM – 6:00 PM</span>
+    <span>📍 Trinity Business School Portal</span>
+  </div>
+  <a
+    href="https://luma.com/event/evt-ne4HTlEJnF6dWFD"
+    class="luma-checkout--button hackathon-banner__btn"
+    data-luma-action="checkout"
+    data-luma-event-id="evt-ne4HTlEJnF6dWFD"
+  >
+    Register for Event
+  </a>
+</div>
+<script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
 ## Sign up and check in here
 
 Welcome to the Claude Builder Club at Trinity College Dublin! Join our community of students building with Claude and AI.
