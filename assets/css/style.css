@@ -431,6 +431,50 @@ li {
   margin-top: var(--spacing-lg);
 }
 
+/* Discord section — text left, widget right */
+.discord-section {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: flex-start;
+  margin: var(--spacing-lg) 0;
+}
+
+.discord-section__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.discord-section__desc {
+  margin: 0;
+  color: var(--text-gray-1);
+}
+
+.discord-section__widget {
+  flex: 0 0 320px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  margin-left: auto;
+}
+
+.discord-section__widget iframe {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .discord-section {
+    flex-direction: column;
+  }
+
+  .discord-section__widget {
+    flex: none;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 /* Discord CTA button */
 .discord-cta {
   margin: var(--spacing-lg) 0;
