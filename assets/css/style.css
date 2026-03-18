@@ -1177,6 +1177,158 @@ li {
   border-bottom: 1px solid rgba(234, 179, 8, 0.25);
 }
 
+/* ---- Tracks ---- */
+@keyframes hk-border-pulse {
+  0%, 100% { opacity: 0.5; }
+  50%       { opacity: 1; }
+}
+
+@keyframes hk-corner-flicker {
+  0%, 96%, 100% { opacity: 1; }
+  97%            { opacity: 0.2; }
+  98%            { opacity: 1; }
+  99%            { opacity: 0.4; }
+}
+
+.hk-tracks {
+  margin: var(--spacing-2xl) 0;
+}
+
+.hk-tracks__intro {
+  color: rgba(255,255,255,0.5);
+  margin-bottom: var(--spacing-lg);
+}
+
+.hk-tracks__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* base track card */
+.hk-track {
+  position: relative;
+  border-radius: var(--radius-md);
+  padding: 2px;
+  background: transparent;
+  transition: transform var(--transition-base);
+}
+
+.hk-track:hover {
+  transform: translateY(-6px);
+}
+
+/* neon border via box-shadow on inner */
+.hk-track__inner {
+  position: relative;
+  background: #050505;
+  border-radius: calc(var(--radius-md) - 2px);
+  padding: var(--spacing-lg) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-align: center;
+  height: 100%;
+  border: 1px solid transparent;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+/* ASCII corner decorations */
+.hk-track__corner {
+  position: absolute;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.7rem;
+  line-height: 1;
+  z-index: 2;
+  animation: hk-corner-flicker 4s infinite;
+}
+.hk-track__corner--tl { top: 6px;  left: 8px; }
+.hk-track__corner--tr { top: 6px;  right: 8px; }
+.hk-track__corner--bl { bottom: 6px; left: 8px; }
+.hk-track__corner--br { bottom: 6px; right: 8px; }
+
+.hk-track__emoji {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.hk-track__name {
+  font-size: 0.6rem;
+  line-height: 1.8;
+}
+
+.hk-track__desc {
+  font-size: var(--font-size-sm);
+  color: rgba(255,255,255,0.45);
+  margin: 0;
+}
+
+/* ── Bio: cyan ── */
+.hk-track--bio .hk-track__inner {
+  border-color: rgba(0, 255, 255, 0.25);
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.08) inset;
+  animation: hk-border-pulse 3s ease infinite;
+}
+.hk-track--bio:hover .hk-track__inner {
+  border-color: rgba(0, 255, 255, 0.7);
+  box-shadow: 0 0 28px rgba(0, 255, 255, 0.25), 0 0 60px rgba(0, 255, 255, 0.08);
+}
+.hk-track--bio .hk-track__corner,
+.hk-track--bio .hk-track__name { color: #00ffff; }
+
+/* ── Neuro: magenta/pink ── */
+.hk-track--neuro .hk-track__inner {
+  border-color: rgba(255, 0, 200, 0.25);
+  box-shadow: 0 0 18px rgba(255, 0, 200, 0.08) inset;
+  animation: hk-border-pulse 3.4s ease infinite;
+}
+.hk-track--neuro:hover .hk-track__inner {
+  border-color: rgba(255, 0, 200, 0.7);
+  box-shadow: 0 0 28px rgba(255, 0, 200, 0.25), 0 0 60px rgba(255, 0, 200, 0.08);
+}
+.hk-track--neuro .hk-track__corner,
+.hk-track--neuro .hk-track__name { color: #ff00c8; }
+
+/* ── Edu: lime green ── */
+.hk-track--edu .hk-track__inner {
+  border-color: rgba(57, 255, 20, 0.25);
+  box-shadow: 0 0 18px rgba(57, 255, 20, 0.08) inset;
+  animation: hk-border-pulse 2.8s ease infinite;
+}
+.hk-track--edu:hover .hk-track__inner {
+  border-color: rgba(57, 255, 20, 0.7);
+  box-shadow: 0 0 28px rgba(57, 255, 20, 0.25), 0 0 60px rgba(57, 255, 20, 0.08);
+}
+.hk-track--edu .hk-track__corner,
+.hk-track--edu .hk-track__name { color: #39ff14; }
+
+/* ── Gov: electric blue ── */
+.hk-track--gov .hk-track__inner {
+  border-color: rgba(0, 120, 255, 0.25);
+  box-shadow: 0 0 18px rgba(0, 120, 255, 0.08) inset;
+  animation: hk-border-pulse 3.8s ease infinite;
+}
+.hk-track--gov:hover .hk-track__inner {
+  border-color: rgba(0, 120, 255, 0.7);
+  box-shadow: 0 0 28px rgba(0, 120, 255, 0.3), 0 0 60px rgba(0, 120, 255, 0.08);
+}
+.hk-track--gov .hk-track__corner,
+.hk-track--gov .hk-track__name { color: #0078ff; }
+
+/* ── Art: orange/gold ── */
+.hk-track--art .hk-track__inner {
+  border-color: rgba(255, 160, 0, 0.25);
+  box-shadow: 0 0 18px rgba(255, 160, 0, 0.08) inset;
+  animation: hk-border-pulse 3.2s ease infinite;
+}
+.hk-track--art:hover .hk-track__inner {
+  border-color: rgba(255, 160, 0, 0.7);
+  box-shadow: 0 0 28px rgba(255, 160, 0, 0.3), 0 0 60px rgba(255, 160, 0, 0.08);
+}
+.hk-track--art .hk-track__corner,
+.hk-track--art .hk-track__name { color: #ffa000; }
+
 /* ---- Prizes ---- */
 .hk-prizes {
   margin: var(--spacing-2xl) 0;

@@ -47,7 +47,7 @@ title: Hackathon 2026
       </div>
       <div class="hk-meta__item">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Trinity Business School Portal
+        The Portal, Trinity Business School
       </div>
     </div>
     <a
@@ -94,6 +94,74 @@ title: Hackathon 2026
   <p>A full-day hands-on hackathon where you build real AI applications using Claude's API. Whether you're a total beginner or an experienced developer, this is your chance to ship something cool, learn fast, and compete for prizes.</p>
 </div>
 
+<div class="hk-tracks">
+  <h2 class="hk-section__title">Tracks</h2>
+  <p class="hk-tracks__intro">Pick a track and build something that matters. All tracks use Claude's API.</p>
+  <div class="hk-tracks__grid">
+
+    <div class="hk-track hk-track--bio">
+      <div class="hk-track__corner hk-track__corner--tl">┌─</div>
+      <div class="hk-track__corner hk-track__corner--tr">─┐</div>
+      <div class="hk-track__corner hk-track__corner--bl">└─</div>
+      <div class="hk-track__corner hk-track__corner--br">─┘</div>
+      <div class="hk-track__inner">
+        <div class="hk-track__emoji">🧬</div>
+        <div class="hk-track__name hk-pixel">Biology &amp;<br>Physical Health</div>
+        <div class="hk-track__desc">Drug discovery, diagnostics, fitness, longevity — make bodies work better.</div>
+      </div>
+    </div>
+
+    <div class="hk-track hk-track--neuro">
+      <div class="hk-track__corner hk-track__corner--tl">┌─</div>
+      <div class="hk-track__corner hk-track__corner--tr">─┐</div>
+      <div class="hk-track__corner hk-track__corner--bl">└─</div>
+      <div class="hk-track__corner hk-track__corner--br">─┘</div>
+      <div class="hk-track__inner">
+        <div class="hk-track__emoji">🧠</div>
+        <div class="hk-track__name hk-pixel">Neuroscience &amp;<br>Mental Health</div>
+        <div class="hk-track__desc">Therapy tools, cognitive aids, mood tracking — support minds at scale.</div>
+      </div>
+    </div>
+
+    <div class="hk-track hk-track--edu">
+      <div class="hk-track__corner hk-track__corner--tl">┌─</div>
+      <div class="hk-track__corner hk-track__corner--tr">─┐</div>
+      <div class="hk-track__corner hk-track__corner--bl">└─</div>
+      <div class="hk-track__corner hk-track__corner--br">─┘</div>
+      <div class="hk-track__inner">
+        <div class="hk-track__emoji">📚</div>
+        <div class="hk-track__name hk-pixel">Economic<br>Empowerment &amp; Education</div>
+        <div class="hk-track__desc">Tutoring, financial literacy, job access — break down barriers to opportunity.</div>
+      </div>
+    </div>
+
+    <div class="hk-track hk-track--gov">
+      <div class="hk-track__corner hk-track__corner--tl">┌─</div>
+      <div class="hk-track__corner hk-track__corner--tr">─┐</div>
+      <div class="hk-track__corner hk-track__corner--bl">└─</div>
+      <div class="hk-track__corner hk-track__corner--br">─┘</div>
+      <div class="hk-track__inner">
+        <div class="hk-track__emoji">🗳️</div>
+        <div class="hk-track__name hk-pixel">Governance &amp;<br>Collaboration</div>
+        <div class="hk-track__desc">Civic tools, deliberation platforms, trust systems — strengthen democracy.</div>
+      </div>
+    </div>
+
+    <div class="hk-track hk-track--art">
+      <div class="hk-track__corner hk-track__corner--tl">┌─</div>
+      <div class="hk-track__corner hk-track__corner--tr">─┐</div>
+      <div class="hk-track__corner hk-track__corner--bl">└─</div>
+      <div class="hk-track__corner hk-track__corner--br">─┘</div>
+      <div class="hk-track__inner">
+        <div class="hk-track__emoji">🎨</div>
+        <div class="hk-track__name hk-pixel">Creative<br>Flourishing</div>
+        <div class="hk-track__desc">Music, writing, art, games — help humans create and experience beauty.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <div class="hk-prizes">
   <h2 class="hk-section__title">Prizes</h2>
   <div class="hk-prizes__grid">
@@ -120,51 +188,43 @@ title: Hackathon 2026
   <h2 class="hk-section__title">Schedule</h2>
   <div class="hk-timeline">
     <div class="hk-timeline__item">
-      <div class="hk-timeline__time">10:00 AM</div>
+      <div class="hk-timeline__time">10:00–11:00</div>
       <div class="hk-timeline__dot"></div>
       <div class="hk-timeline__content">
-        <strong>Doors open & team formation</strong>
-        <p>Grab coffee, meet your teammates, and get set up.</p>
+        <strong>Introduction & Group Forming</strong>
+        <p>Hackathon kickoff, rules briefing, and team formation.</p>
       </div>
     </div>
     <div class="hk-timeline__item">
-      <div class="hk-timeline__time">10:30 AM</div>
+      <div class="hk-timeline__time">11:00–13:00</div>
       <div class="hk-timeline__dot"></div>
       <div class="hk-timeline__content">
-        <strong>Hacking begins</strong>
-        <p>Theme announced. Start building!</p>
+        <strong>Hacking</strong>
+        <p>Build your project. Mentors available throughout.</p>
       </div>
     </div>
     <div class="hk-timeline__item">
-      <div class="hk-timeline__time">1:00 PM</div>
+      <div class="hk-timeline__time">13:00–14:00</div>
       <div class="hk-timeline__dot"></div>
       <div class="hk-timeline__content">
-        <strong>Lunch break</strong>
-        <p>Food provided. Quick check-in with mentors.</p>
+        <strong>Lunch + Talk by Kevin Collins</strong>
+        <p>Food provided. Special guest talk during the break.</p>
       </div>
     </div>
     <div class="hk-timeline__item">
-      <div class="hk-timeline__time">4:30 PM</div>
+      <div class="hk-timeline__time">14:00–16:00</div>
       <div class="hk-timeline__dot"></div>
       <div class="hk-timeline__content">
-        <strong>Submissions close</strong>
-        <p>Wrap up your project and submit a short demo.</p>
+        <strong>Hacking</strong>
+        <p>Final sprint — wrap up and polish your project.</p>
       </div>
     </div>
     <div class="hk-timeline__item">
-      <div class="hk-timeline__time">5:00 PM</div>
+      <div class="hk-timeline__time">16:00–18:30</div>
       <div class="hk-timeline__dot"></div>
       <div class="hk-timeline__content">
-        <strong>Demos & judging</strong>
-        <p>Present to the panel. 3 minutes per team.</p>
-      </div>
-    </div>
-    <div class="hk-timeline__item">
-      <div class="hk-timeline__time">6:00 PM</div>
-      <div class="hk-timeline__dot"></div>
-      <div class="hk-timeline__content">
-        <strong>Awards ceremony</strong>
-        <p>Winners announced. Prizes distributed.</p>
+        <strong>Pitching, Judging & Awards</strong>
+        <p>Present your project to the panel. Winners announced and prizes distributed.</p>
       </div>
     </div>
   </div>
@@ -179,7 +239,7 @@ title: Hackathon 2026
     </div>
     <div class="hk-faq__item">
       <strong>Do I need a team?</strong>
-      <p>You can sign up solo or as a team of up to 4. We'll help with team formation at the start.</p>
+      <p>You can sign up solo or as a team of up to 5. We'll help with team formation at the start.</p>
     </div>
     <div class="hk-faq__item">
       <strong>What should I bring?</strong>
