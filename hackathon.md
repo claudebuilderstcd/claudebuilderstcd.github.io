@@ -240,6 +240,116 @@ title: Hackathon 2026
   </div>
 </div>
 
+<div class="hk-mascot-section">
+  <div class="hk-mascot" id="hk-mascot" aria-hidden="true">
+    <div class="hk-mascot__sprite">
+      <!-- side claws -->
+      <div class="hk-mascot__bump hk-mascot__bump--left"></div>
+      <div class="hk-mascot__bump hk-mascot__bump--right"></div>
+      <!-- body -->
+      <div class="hk-mascot__body">
+        <div class="hk-mascot__eye-row">
+          <div class="hk-mascot__eye"></div>
+          <div class="hk-mascot__eye"></div>
+        </div>
+      </div>
+      <!-- 4 legs -->
+      <div class="hk-mascot__legs">
+        <div class="hk-mascot__leg"></div>
+        <div class="hk-mascot__leg"></div>
+        <div class="hk-mascot__leg"></div>
+        <div class="hk-mascot__leg"></div>
+      </div>
+    </div>
+    <div class="hk-mascot__label hk-pixel">Claw'd</div>
+  </div>
+  <p class="hk-mascot__hint hk-pixel">[ hover to interact ]</p>
+</div>
+
+<script>
+(function() {
+  var mascot = document.getElementById('hk-mascot');
+  if (!mascot) return;
+
+  var posX = 0, posY = 0;
+  var velX = 0, velY = 0;
+  var section = mascot.parentElement;
+  var sectionRect;
+  var MASCOT_W = 160, MASCOT_H = 110;
+
+  function updateRect() { sectionRect = section.getBoundingClientRect(); }
+  updateRect();
+  window.addEventListener('resize', updateRect);
+
+  // Start roughly centered
+  posX = 300;
+  posY = 40;
+
+  var scaredBlinking = false;
+
+  document.addEventListener('mousemove', function(e) {
+    if (!sectionRect) return;
+    var mx = e.clientX - sectionRect.left;
+    var my = e.clientY - sectionRect.top;
+    var cx = posX + MASCOT_W / 2;
+    var cy = posY + MASCOT_H / 2;
+    var dx = cx - mx;
+    var dy = cy - my;
+    var dist = Math.sqrt(dx * dx + dy * dy);
+    if (dist < 140 && dist > 0.1) {
+      var force = (140 - dist) / 140;
+      velX += (dx / dist) * force * 18;
+      velY += (dy / dist) * force * 10;
+      // Squeeze eyes shut while mouse is close
+      if (!scaredBlinking) {
+        scaredBlinking = true;
+        mascot.querySelectorAll('.hk-mascot__eye').forEach(function(e) { e.classList.add('blink'); });
+      }
+    } else {
+      if (scaredBlinking) {
+        scaredBlinking = false;
+        mascot.querySelectorAll('.hk-mascot__eye').forEach(function(e) { e.classList.remove('blink'); });
+      }
+    }
+  });
+
+  function animate() {
+    requestAnimationFrame(animate);
+    updateRect();
+    var maxX = (sectionRect ? sectionRect.width : 800) - MASCOT_W;
+    var maxY = (sectionRect ? sectionRect.height : 180) - MASCOT_H - 30;
+
+    // Friction — decelerates quickly
+    velX *= 0.82;
+    velY *= 0.82;
+    posX += velX;
+    posY += velY;
+
+    // Wall bounce
+    if (posX < 0)    { posX = 0;    velX =  Math.abs(velX) * 0.4; }
+    if (posY < 0)    { posY = 0;    velY =  Math.abs(velY) * 0.4; }
+    if (posX > maxX) { posX = maxX; velX = -Math.abs(velX) * 0.4; }
+    if (posY > maxY) { posY = maxY; velY = -Math.abs(velY) * 0.4; }
+
+    // Slight tilt based on horizontal speed
+    var tilt = Math.max(-10, Math.min(10, velX * 1.2));
+    mascot.style.transform = 'translate(' + posX + 'px, ' + posY + 'px) rotate(' + tilt + 'deg)';
+  }
+
+  animate();
+
+  // Blinking
+  function blink() {
+    mascot.querySelectorAll('.hk-mascot__eye').forEach(function(e) { e.classList.add('blink'); });
+    setTimeout(function() {
+      mascot.querySelectorAll('.hk-mascot__eye').forEach(function(e) { e.classList.remove('blink'); });
+    }, 110);
+    setTimeout(blink, 2000 + Math.random() * 3000);
+  }
+  setTimeout(blink, 1000);
+})();
+</script>
+
 <div class="hk-cta">
   <h2>Ready to build?</h2>
   <p>Spots are limited — secure yours now.</p>

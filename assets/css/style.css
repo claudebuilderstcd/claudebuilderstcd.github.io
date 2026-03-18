@@ -1467,6 +1467,134 @@ li {
   color: rgba(255,255,255,0.55);
 }
 
+/* ---- Mascot ---- */
+.hk-mascot-section {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  margin: var(--spacing-2xl) 0 var(--spacing-lg);
+}
+
+.hk-mascot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  will-change: transform;
+  cursor: none;
+  user-select: none;
+  image-rendering: pixelated;
+}
+
+.hk-mascot__sprite {
+  position: relative;
+  width: 160px;
+}
+
+/* Side claws — vertically centered on the 80px body */
+.hk-mascot__bump {
+  position: absolute;
+  top: 30px; 
+  width: 20px;
+  height: 30px;
+  background: #D97352;
+}
+.hk-mascot__bump--left  { left: 0; }
+.hk-mascot__bump--right { right: 0; }
+
+/* Main body */
+.hk-mascot__body {
+  width: 120px;
+  height: 90px;
+  background: #D97352;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 18px; 
+}
+
+.hk-mascot__eye-row {
+  display: flex;
+  gap: 60px;
+}
+
+.hk-mascot__eye {
+  width: 15px;
+  height: 15px;
+  background: #111;
+  flex-shrink: 0;
+  position: relative;
+  transition: background 0.05s;
+}
+
+/* > < on blink via pseudo-element text */
+.hk-mascot__eye:first-child.blink  { background: transparent; }
+.hk-mascot__eye:last-child.blink   { background: transparent; }
+
+.hk-mascot__eye:first-child.blink::after {
+  content: '>';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: monospace;
+  font-size: 22px;
+  font-weight: 900;
+  color: #1a0a00;
+  line-height: 1;
+  -webkit-text-stroke: 1px #1a0a00;
+}
+.hk-mascot__eye:last-child.blink::after {
+  content: '<';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: monospace;
+  font-size: 22px;
+  font-weight: 900;
+  color: #1a0a00;
+  line-height: 1;
+  -webkit-text-stroke: 1px #1a0a00;
+}
+
+/* 4 legs — gaps: 15, 30, 15 */
+.hk-mascot__legs {
+  display: flex;
+  justify-content: center;
+}
+
+.hk-mascot__leg {
+  width: 15px;
+  height: 30px;
+  background: #D97352;
+}
+.hk-mascot__leg + .hk-mascot__leg     { margin-left: 15px; }
+.hk-mascot__leg:nth-child(3)          { margin-left: 30px; }
+
+.hk-mascot__label {
+  font-size: 0.42rem;
+  color: rgba(217, 115, 82, 0.7);
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.hk-mascot__hint {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.38rem;
+  color: rgba(255, 255, 255, 0.18);
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
 /* ---- Bottom CTA ---- */
 .hk-cta {
   text-align: center;
