@@ -96,6 +96,11 @@ title: Hackathon 2026
 
 <div class="hk-tracks">
   <h2 class="hk-section__title">Tracks</h2>
+  <div class="hk-prize-pool">
+    <div class="hk-prize-pool__label hk-pixel">// TOTAL PRIZE POOL</div>
+    <div class="hk-prize-pool__amount hk-pixel">$1,500</div>
+    <div class="hk-prize-pool__sub">in API Credits — <span class="hk-prize-pool__per">$300 per track winner</span></div>
+  </div>
   <p class="hk-tracks__intro">Pick a track and build something that matters. All tracks use Claude's API.</p>
   <div class="hk-tracks__grid">
 
@@ -108,6 +113,7 @@ title: Hackathon 2026
         <div class="hk-track__emoji">🧬</div>
         <div class="hk-track__name hk-pixel">Biology &amp;<br>Physical Health</div>
         <div class="hk-track__desc">Drug discovery, diagnostics, fitness, longevity — make bodies work better.</div>
+        <div class="hk-track__prize">$300 API Credits</div>
       </div>
     </div>
 
@@ -120,6 +126,7 @@ title: Hackathon 2026
         <div class="hk-track__emoji">🧠</div>
         <div class="hk-track__name hk-pixel">Neuroscience &amp;<br>Mental Health</div>
         <div class="hk-track__desc">Therapy tools, cognitive aids, mood tracking — support minds at scale.</div>
+        <div class="hk-track__prize">$300 API Credits</div>
       </div>
     </div>
 
@@ -132,6 +139,7 @@ title: Hackathon 2026
         <div class="hk-track__emoji">📚</div>
         <div class="hk-track__name hk-pixel">Economic<br>Empowerment &amp; Education</div>
         <div class="hk-track__desc">Tutoring, financial literacy, job access — break down barriers to opportunity.</div>
+        <div class="hk-track__prize">$300 API Credits</div>
       </div>
     </div>
 
@@ -144,6 +152,7 @@ title: Hackathon 2026
         <div class="hk-track__emoji">🗳️</div>
         <div class="hk-track__name hk-pixel">Governance &amp;<br>Collaboration</div>
         <div class="hk-track__desc">Civic tools, deliberation platforms, trust systems — strengthen democracy.</div>
+        <div class="hk-track__prize">$300 API Credits</div>
       </div>
     </div>
 
@@ -156,32 +165,11 @@ title: Hackathon 2026
         <div class="hk-track__emoji">🎨</div>
         <div class="hk-track__name hk-pixel">Creative<br>Flourishing</div>
         <div class="hk-track__desc">Music, writing, art, games — help humans create and experience beauty.</div>
+        <div class="hk-track__prize">$300 API Credits</div>
       </div>
     </div>
 
   </div>
-</div>
-
-<div class="hk-prizes">
-  <h2 class="hk-section__title">Prizes</h2>
-  <div class="hk-prizes__grid">
-    <div class="hk-prize hk-prize--gold">
-      <div class="hk-prize__medal">🥇</div>
-      <div class="hk-prize__label">1st Place</div>
-      <div class="hk-prize__value">$150 API Credits</div>
-    </div>
-    <div class="hk-prize hk-prize--silver">
-      <div class="hk-prize__medal">🥈</div>
-      <div class="hk-prize__label">2nd Place</div>
-      <div class="hk-prize__value">$100 API Credits</div>
-    </div>
-    <div class="hk-prize hk-prize--bronze">
-      <div class="hk-prize__medal">🥉</div>
-      <div class="hk-prize__label">3rd Place</div>
-      <div class="hk-prize__value">$50 API Credits</div>
-    </div>
-  </div>
-  <p class="hk-prizes__note">All participants receive Claude Pro access and API credits just for attending!</p>
 </div>
 
 <div class="hk-schedule">
